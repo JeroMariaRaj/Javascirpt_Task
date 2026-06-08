@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals Tasks</title>
+</head>
+<body>
+
+    <h1>JavaScript Fundamentals Tasks</h1>
+    <p>Open the browser console (F12 → Console) to view the output.</p>
+
+    <script>
+        // =========================================
+        // JavaScript Fundamentals Tasks
+        // Concepts: Variables, Comparison, Logical, Ternary
+        // =========================================
+
+        // Task 1: Student Result Checker
+        let marks = 75;
+        let result = marks >= 35 ? "Pass" : "Fail";
+        let grade = marks >= 90 ? "Grade A" :
+                    marks >= 75 ? "Grade B" :
+                    marks >= 60 ? "Grade C" : "No Grade";
+        console.log("Task 1:", result, "-", grade);
+
+        // Task 2: Employee Bonus Eligibility
+        let salary = 25000;
+        let experience = 3;
+        let bonusStatus = salary >= 20000 && experience >= 2
+            ? "Eligible for Bonus"
+            : "Not Eligible";
+        console.log("Task 2:", bonusStatus);
+
+        // Task 3: User Login Validation
+        let email = "admin@gmail.com";
+        let password = "12345";
+        let login = email === "admin@gmail.com" &&
+                    password === "12345"
+            ? "Login Success"
+            : "Login Failed";
+        console.log("Task 3:", login);
+
+        // Task 4: Product Discount Checker
+        let price = 2000;
+        let discount = price > 1000
+            ? "20% Discount Applied"
+            : "No Discount";
+        console.log("Task 4:", discount);
+
+        // Task 5: Voting Eligibility Checker
+        let age = 19;
+        let votingStatus = age >= 18
+            ? "Eligible for Voting"
+            : "Not Eligible";
+        console.log("Task 5:", votingStatus);
+
+        // Task 6: Employee Attendance Validation
+        let isPresent = true;
+        let completedTask = true;
+        let salaryEligibility = isPresent && completedTask
+            ? "Eligible for Salary"
+            : "Not Eligible";
+        console.log("Task 6:", salaryEligibility);
+
+        // Task 7: Website Access Control
+        let isLoggedIn = true;
+        let isPremiumUser = false;
+        let access = isLoggedIn && isPremiumUser
+            ? "Premium Content Access"
+            : "Access Denied";
+        console.log("Task 7:", access);
+
+        // Task 8: Online Exam Eligibility
+        let attendance = 80;
+        let feesPaid = true;
+        let examStatus = attendance >= 75 && feesPaid
+            ? "Eligible for Exam"
+            : "Not Eligible";
+        console.log("Task 8:", examStatus);
+
+        // Task 9: Loan Approval Checker
+        let monthlyIncome = 40000;
+        let creditScore = 750;
+        let loanStatus = monthlyIncome >= 30000 &&
+                         creditScore >= 700
+            ? "Loan Approved"
+            : "Loan Rejected";
+        console.log("Task 9:", loanStatus);
+
+        // Task 10: Employee Performance Status
+        let completedProjects = 6;
+        let performance = completedProjects >= 5
+            ? "Good Performance"
+            : "Needs Improvement";
+        console.log("Task 10:", performance);
+
+        // Bonus Task: Company Employee Verification
+        let employeeId = 101;
+        let department = "Development";
+        let empSalary = 35000;
+        let exp = 2;
+
+        let verification = employeeId === 101 &&
+                           department === "Development"
+            ? "Employee Verified"
+            : "Verification Failed";
+
+        let performanceStatus = exp >= 2
+            ? "Good"
+            : "Average";
+
+        let bonusEligibility = empSalary >= 30000
+            ? "Bonus Eligible"
+            : "No Bonus";
+
+        console.log("Bonus Task:");
+        console.log("Verification:", verification);
+        console.log("Performance:", performanceStatus);
+        console.log("Bonus Status:", bonusEligibility);
+    </script>
+
+</body>
+</html>
