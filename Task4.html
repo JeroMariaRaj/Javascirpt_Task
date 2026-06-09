@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+    <h2>Open Console (F12) to See Output</h2>
+
+    <script>
+        // Task 1: Age Category Finder
+        let age = Number(prompt("Task 1 - Enter Age:"));
+        if (age <= 12) console.log("Child");
+        else if (age <= 19) console.log("Teenager");
+        else if (age <= 59) console.log("Adult");
+        else console.log("Senior Citizen");
+
+        // Task 2: Salary Hike Calculator
+        let salary = Number(prompt("Task 2 - Enter Salary:"));
+        let newSalary;
+        if (salary < 20000) newSalary = salary + salary * 0.20;
+        else if (salary <= 50000) newSalary = salary + salary * 0.10;
+        else newSalary = salary + salary * 0.05;
+        console.log("Old Salary:", salary, "New Salary:", newSalary);
+
+        // Task 3: Electricity Bill
+        let units = Number(prompt("Task 3 - Enter Units:"));
+        let bill;
+        if (units <= 100) bill = units * 5;
+        else if (units <= 200) bill = units * 7;
+        else bill = units * 10;
+        console.log("Bill:", bill);
+
+        // Task 4: ATM
+        let balance = 10000;
+        let amount = Number(prompt("Task 4 - Enter Withdrawal Amount:"));
+        if (amount <= balance) {
+            balance -= amount;
+            console.log("Withdrawal Successful");
+            console.log("Remaining Balance:", balance);
+        } else {
+            console.log("Insufficient Funds");
+        }
+
+        // Task 5: Login Validation
+        let user = prompt("Task 5 - Username:");
+        let pass = prompt("Password:");
+        if (user === "admin" && pass === "12345")
+            console.log("Login Successful");
+        else
+            console.log("Invalid Credentials");
+
+        // Task 6: Mobile Recharge Offer
+        let recharge = Number(prompt("Task 6 - Recharge Amount:"));
+        if (recharge >= 499) console.log("Netflix Offer");
+        else if (recharge >= 299) console.log("2GB Extra Data");
+        else console.log("No Offer");
+
+        // Task 7: Traffic Signal
+        let color = prompt("Task 7 - Signal Color:");
+        switch (color.toLowerCase()) {
+            case "red": console.log("Stop"); break;
+            case "yellow": console.log("Ready"); break;
+            case "green": console.log("Go"); break;
+            default: console.log("Invalid Color");
+        }
+
+        // Task 8: Attendance
+        let working = Number(prompt("Task 8 - Working Days:"));
+        let present = Number(prompt("Present Days:"));
+        let attendance = (present / working) * 100;
+        console.log("Attendance:", attendance + "%");
+        console.log(attendance >= 75 ? "Eligible" : "Not Eligible");
+
+        // Task 9: Bus Ticket
+        let tickets = Number(prompt("Task 9 - Number of Tickets:"));
+        let total = tickets * 500;
+        let gst = total * 0.05;
+        console.log("Final Amount:", total + gst);
+
+        // Task 10: Restaurant Bill
+        let foodCost = Number(prompt("Task 10 - Food Cost:"));
+        let finalBill = foodCost > 2000 ? foodCost * 0.90 : foodCost;
+        console.log("Final Bill:", finalBill);
+
+        // Task 11: Police Recruitment
+        let a = Number(prompt("Task 11 - Age:"));
+        let h = Number(prompt("Height:"));
+        let w = Number(prompt("Weight:"));
+        if (a >= 18) {
+            if (h >= 160) {
+                if (w >= 55) console.log("Selected");
+                else console.log("Rejected: Weight");
+            } else console.log("Rejected: Height");
+        } else console.log("Rejected: Age");
+
+        // Task 12: Student Result
+        let m1 = Number(prompt("Mark 1:"));
+        let m2 = Number(prompt("Mark 2:"));
+        let m3 = Number(prompt("Mark 3:"));
+        let m4 = Number(prompt("Mark 4:"));
+        let m5 = Number(prompt("Mark 5:"));
+        let percentage = (m1 + m2 + m3 + m4 + m5) / 5;
+        console.log("Percentage:", percentage);
+        if (percentage >= 90) console.log("Grade A+");
+        else if (percentage >= 80) console.log("Grade A");
+        else if (percentage >= 70) console.log("Grade B");
+        else if (percentage >= 60) console.log("Grade C");
+        else console.log("Fail");
+
+        // Task 13: Shift Finder
+        let time = Number(prompt("Task 13 - Enter Time (0-23):"));
+        if (time >= 6 && time < 14) console.log("Morning Shift");
+        else if (time >= 14 && time < 22) console.log("Afternoon Shift");
+        else console.log("Night Shift");
+
+        // Task 14: Loan Eligibility
+        let ageLoan = Number(prompt("Task 14 - Age:"));
+        let salLoan = Number(prompt("Salary:"));
+        let exp = Number(prompt("Experience:"));
+        if (ageLoan >= 21 && salLoan >= 25000 && exp >= 2)
+            console.log("Eligible");
+        else
+            console.log("Not Eligible");
+
+        // Task 15: Cab Fare
+        let km = Number(prompt("Task 15 - Distance:"));
+        let fare = km <= 5 ? km * 20 : (5 * 20) + ((km - 5) * 15);
+        console.log("Fare:", fare);
+
+        // Task 16: Multiplication Table
+        let num = Number(prompt("Task 16 - Enter Number:"));
+        for (let i = 1; i <= 10; i++) {
+            console.log(num + " x " + i + " = " + (num * i));
+        }
+
+        // Task 17: Password Checker
+        let len = Number(prompt("Task 17 - Password Length:"));
+        if (len < 6) console.log("Weak");
+        else if (len <= 10) console.log("Medium");
+        else console.log("Strong");
+
+        // Task 18: Bonus System
+        let experience = Number(prompt("Task 18 - Experience:"));
+        let empSalary = Number(prompt("Salary:"));
+        let bonus;
+        if (experience <= 2) bonus = empSalary * 0.05;
+        else if (experience <= 5) bonus = empSalary * 0.10;
+        else bonus = empSalary * 0.20;
+        console.log("Bonus:", bonus);
+
+        // Task 19: Countdown
+        let count = 10;
+        while (count >= 1) {
+            console.log(count);
+            count--;
+        }
+        console.log("Happy New Year");
+
+        // Task 20: Interview Selection
+        let degree = prompt("Task 20 - Degree Completed (yes/no):");
+        let communication = prompt("Communication (Good/Poor):");
+        let technical = Number(prompt("Technical Score:"));
+        if (degree === "yes") {
+            if (communication === "Good") {
+                if (technical >= 70) console.log("Selected");
+                else console.log("Rejected: Technical Score");
+            } else console.log("Rejected: Communication");
+        } else console.log("Rejected: Degree Not Completed");
+    </script>
+</body>
+</html>
