@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Real-Time Tasks</title>
+</head>
+<body>
+
+<script>
+
+// Task 1: Employee Salary Calculator
+console.log("===== Task 1: Employee Salary Calculator =====");
+
+let basicSalary = Number(prompt("Enter Basic Salary:"));
+let hra = basicSalary * 0.20;
+let bonus = basicSalary * 0.10;
+let totalSalary = basicSalary + hra + bonus;
+let tax = totalSalary * 0.05;
+let finalSalary = totalSalary - tax;
+
+console.log("Basic Salary:", basicSalary);
+console.log("HRA:", hra);
+console.log("Bonus:", bonus);
+console.log("Tax:", tax);
+console.log("Final Salary:", finalSalary);
+
+
+// Task 2: Student Grade System
+console.log("\n===== Task 2: Student Grade System =====");
+
+let marks = Number(prompt("Enter Marks:"));
+
+if (marks >= 90) {
+    console.log("Grade A+");
+} else if (marks >= 80) {
+    console.log("Grade A");
+} else if (marks >= 70) {
+    console.log("Grade B");
+} else if (marks >= 60) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+
+// Task 3: Login Authentication System
+console.log("\n===== Task 3: Login Authentication =====");
+
+let username = prompt("Enter Username:");
+let password = prompt("Enter Password:");
+
+if (username === "admin" && password === "12345") {
+    console.log("Login Success");
+} else if (username !== "admin") {
+    console.log("Invalid Username");
+} else {
+    console.log("Invalid Password");
+}
+
+
+// Task 4: ATM Withdrawal Machine
+console.log("\n===== Task 4: ATM Withdrawal =====");
+
+let balance = 5000;
+let withdrawAmount = Number(prompt("Enter Withdrawal Amount:"));
+
+if (withdrawAmount > balance) {
+    console.log("Insufficient Balance");
+} else {
+    balance -= withdrawAmount;
+    console.log("Withdrawal Success");
+    console.log("Remaining Balance:", balance);
+}
+
+
+// Task 5: E-Commerce Discount System
+console.log("\n===== Task 5: E-Commerce Discount =====");
+
+let purchaseAmount = Number(prompt("Enter Purchase Amount:"));
+let discount = 0;
+
+if (purchaseAmount >= 10000) {
+    discount = purchaseAmount * 0.20;
+} else if (purchaseAmount >= 5000) {
+    discount = purchaseAmount * 0.10;
+} else if (purchaseAmount >= 2000) {
+    discount = purchaseAmount * 0.05;
+}
+
+console.log("Original Amount:", purchaseAmount);
+console.log("Discount:", discount);
+console.log("Final Amount:", purchaseAmount - discount);
+
+
+// Task 6: Traffic Fine Checker
+console.log("\n===== Task 6: Traffic Fine Checker =====");
+
+let helmet = prompt("Helmet Available? (Yes/No)");
+let license = prompt("License Available? (Yes/No)");
+
+if (helmet === "No" && license === "No") {
+    console.log("Fine: ₹3000");
+} else if (helmet === "No") {
+    console.log("Fine: ₹1000");
+} else if (license === "No") {
+    console.log("Fine: ₹2000");
+} else {
+    console.log("No Fine");
+}
+
+
+// Task 7: Employee Attendance Tracker
+console.log("\n===== Task 7: Attendance Tracker =====");
+
+let attendance = ["P", "P", "A", "P", "A", "P", "P"];
+let present = 0;
+let absent = 0;
+
+for (let status of attendance) {
+    if (status === "P") {
+        present++;
+    } else {
+        absent++;
+    }
+}
+
+console.log("Present Days:", present);
+console.log("Absent Days:", absent);
+
+
+// Task 8: Product Inventory Management
+console.log("\n===== Task 8: Product Inventory =====");
+
+let product = {
+    productName: prompt("Enter Product Name:"),
+    price: Number(prompt("Enter Product Price:")),
+    stock: Number(prompt("Enter Product Stock:"))
+};
+
+for (let key in product) {
+    console.log(key + ":", product[key]);
+}
+
+
+// Task 9: Cab Fare Calculator
+console.log("\n===== Task 9: Cab Fare Calculator =====");
+
+let distance = Number(prompt("Enter Distance (KM):"));
+let fare = 0;
+
+if (distance <= 5) {
+    fare = distance * 20;
+} else if (distance <= 10) {
+    fare = (5 * 20) + ((distance - 5) * 15);
+} else {
+    fare = (5 * 20) + (5 * 15) + ((distance - 10) * 10);
+}
+
+console.log("Distance:", distance, "KM");
+console.log("Total Fare: ₹" + fare);
+
+
+// Task 10: Employee Management System
+console.log("\n===== Task 10: Employee Management =====");
+
+let employees = [];
+
+for (let i = 1; i <= 3; i++) {
+    let id = Number(prompt(`Enter Employee ${i} ID:`));
+    let name = prompt(`Enter Employee ${i} Name:`);
+    let salary = Number(prompt(`Enter Employee ${i} Salary:`));
+
+    employees.push({ id, name, salary });
+}
+
+let highest = employees[0];
+let lowest = employees[0];
+let totalExpense = 0;
+
+for (let emp of employees) {
+    if (emp.salary > highest.salary) highest = emp;
+    if (emp.salary < lowest.salary) lowest = emp;
+    totalExpense += emp.salary;
+}
+
+console.log("All Employees:", employees);
+console.log("Highest Salary Employee:", highest.name, "-", highest.salary);
+console.log("Lowest Salary Employee:", lowest.name, "-", lowest.salary);
+console.log("Total Employees:", employees.length);
+console.log("Total Salary Expenditure:", totalExpense);
+
+</script>
+
+</body>
+</html>
