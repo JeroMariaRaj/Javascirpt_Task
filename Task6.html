@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Real-Time Tasks</title>
+</head>
+<body>
+
+    <h1>JavaScript Real-Time Tasks</h1>
+    <p>Open the Console (F12 → Console) to view the output.</p>
+
+    <script>
+
+    // Task 1: Employee Bonus Calculator
+    console.log("\n----- 1: Employee Bonus Calculator -----");
+
+    const EmployeeDetails = [
+        { name: "Alice Johnson", salary: 85000, experience: 5 },
+        { name: "Bob Smith", salary: 62000, experience: 2 },
+        { name: "Charlie Davis", salary: 32000, experience: 1 },
+        { name: "Diana Prince", salary: 95000, experience: 7 }
+    ];
+
+    for (let employee of EmployeeDetails) {
+        if (employee.experience >= 5) {
+            console.log(`${employee.name} is eligible for 20% Bonus`);
+            console.log(`Final Salary: ${employee.salary * 1.2}`);
+        } else if (employee.experience >= 2) {
+            console.log(`${employee.name} is eligible for 10% Bonus`);
+            console.log(`Final Salary: ${employee.salary * 1.1}`);
+        } else {
+            console.log(`${employee.name} is eligible for 5% Bonus`);
+            console.log(`Final Salary: ${employee.salary * 1.05}`);
+        }
+    }
+
+    // Task 2: College Admission System
+    console.log("\n----- 2: College Admission System -----");
+
+    const studentDetails = [
+        { name: "Aarav Sharma", age: 16, percentage: 88.5 },
+        { name: "Priya Patel", age: 17, percentage: 92.0 },
+        { name: "Liam O'Connor", age: 18, percentage: 59.4 },
+        { name: "Mei Lin", age: 18, percentage: 51.2 },
+        { name: "Samuel", age: 17, percentage: 84.7 }
+    ];
+
+    for (let student of studentDetails) {
+        if (student.age >= 17 && student.percentage >= 60) {
+            console.log(`${student.name} - Admission Approved`);
+        } else {
+            console.log(`${student.name} - Admission Rejected`);
+        }
+    }
+
+    // Task 3: Food Delivery Menu
+    console.log("\n----- 3: Food Delivery Menu -----");
+
+    let order = prompt("Press 1 for Pizza, 2 for Burger, 3 for Shawarma, 4 for Fried Rice");
+
+    switch (order) {
+        case "1":
+            console.log("Order Confirmed: Pizza");
+            break;
+        case "2":
+            console.log("Order Confirmed: Burger");
+            break;
+        case "3":
+            console.log("Order Confirmed: Shawarma");
+            break;
+        case "4":
+            console.log("Order Confirmed: Fried Rice");
+            break;
+        default:
+            console.log("Item not available.");
+    }
+
+    // Task 4: Attendance Tracker
+    console.log("\n----- 4: Attendance Tracker -----");
+
+    const studentNames = [
+        "Karthik", "Priya", "Arun", "Anitha", "Santhosh",
+        "Divya", "Mugilan", "Keerthana", "Vijay", "Srividya"
+    ];
+
+    for (let student of studentNames) {
+        console.log(student);
+    }
+
+    console.log("Student Count:", studentNames.length);
+
+    // Task 5: E-Commerce Cart
+    console.log("\n----- 5: E-Commerce Cart -----");
+
+    let cart = [
+        { product: "Mobile", price: 15000 },
+        { product: "Headset", price: 2000 },
+        { product: "Charger", price: 1000 }
+    ];
+
+    let totalValue = 0;
+    let expensiveProduct = cart[0];
+
+    for (let item of cart) {
+        totalValue += item.price;
+
+        if (item.price > expensiveProduct.price) {
+            expensiveProduct = item;
+        }
+    }
+
+    console.log("Total Cart Value:", totalValue);
+    console.log("Most Expensive Product:", expensiveProduct.product);
+
+    // Task 6: Bank Account Management
+    console.log("\n----- 6: Bank Account Management -----");
+
+    const customerDetail = {
+        name: "Rishi",
+        accnum: "abc",
+        password: "123",
+        balance: 10000
+    };
+
+    let accnumber = prompt("Enter Account Number:");
+    let pass = prompt("Enter Password:");
+
+    function deposit(amount) {
+        if (customerDetail.accnum === accnumber && customerDetail.password === pass) {
+            console.log(`Deposited ₹${amount}. Balance: ₹${customerDetail.balance + amount}`);
+        } else {
+            console.log("Invalid Credentials");
+        }
+    }
+
+    function withdraw(amount) {
+        if (
+            customerDetail.accnum === accnumber &&
+            customerDetail.password === pass &&
+            customerDetail.balance >= amount
+        ) {
+            console.log(`Withdrawn ₹${amount}. Balance: ₹${customerDetail.balance - amount}`);
+        } else {
+            console.log("Withdrawal Failed");
+        }
+    }
+
+    deposit(1000);
+    withdraw(5000);
+
+    // Task 7: Movie Ticket Booking
+    console.log("\n----- 7: Movie Ticket Booking -----");
+
+    let age = Number(prompt("Enter Age:"));
+
+    if (age < 5) {
+        console.log("Free Ticket");
+    } else if (age <= 18) {
+        console.log("Ticket Price: ₹100");
+    } else if (age <= 60) {
+        console.log("Ticket Price: ₹200");
+    } else {
+        console.log("Ticket Price: ₹120");
+    }
+
+    // Task 8: Online Shopping Discount
+    console.log("\n----- 8: Online Shopping Discount -----");
+
+    let purchaseAmount = Number(prompt("Enter Purchase Amount:"));
+
+    if (purchaseAmount > 5000) {
+        console.log("Final Amount:", purchaseAmount * 0.8);
+    } else if (purchaseAmount > 3000) {
+        console.log("Final Amount:", purchaseAmount * 0.9);
+    } else {
+        console.log("Final Amount:", purchaseAmount * 0.95);
+    }
+
+    // Task 9: Food Inventory System
+    console.log("\n----- 9: Food Inventory System -----");
+
+    const grocery = ["Rice", "Oil", "Sugar", "Milk", "Egg"];
+
+    grocery.push("Potato", "Tomato");
+    grocery.shift();
+    grocery.pop();
+
+    console.log(grocery);
+    console.log("Contains Milk:", grocery.includes("Milk"));
+
+    // Task 10: Hospital Patient Management
+    console.log("\n----- 10: Hospital Patient Management -----");
+
+    const patientRecords = {
+        patientName: "Senthil Kumar",
+        age: 45,
+        disease: "Hypertension",
+        doctor: "Dr. Ramesh"
+    };
+
+    for (let key in patientRecords) {
+        console.log(`${key}: ${patientRecords[key]}`);
+    }
+
+    const { patientName, disease, doctor } = patientRecords;
+
+    console.log(patientName, disease, doctor);
+
+    // Task 11: Amazon Order Tracker
+    console.log("\n----- 11: Amazon Order Tracker -----");
+
+    function sendSms() {
+        console.log("SMS Sent");
+    }
+
+    function placeOrder(callback) {
+        console.log("Order Placed Successfully");
+        callback();
+    }
+
+    placeOrder(sendSms);
+
+    // Task 12: Cashback Offer Generator
+    console.log("\n----- 12: Cashback Offer Generator -----");
+
+    function* cashbackOfferGenerator() {
+        yield "10% Cashback";
+        yield "20% Cashback";
+        yield "Free Delivery";
+        yield "Buy 1 Get 1";
+    }
+
+    const offer = cashbackOfferGenerator();
+
+    console.log(offer.next().value);
+    console.log(offer.next().value);
+    console.log(offer.next().value);
+    console.log(offer.next().value);
+
+    // Task 13: Employee Database
+    console.log("\n----- 13: Employee Database -----");
+
+    const employees = [
+        { id: 1, name: "Rahul", salary: 25000 },
+        { id: 2, name: "Kavin", salary: 30000 },
+        { id: 3, name: "John", salary: 40000 }
+    ];
+
+    employees.forEach(emp => console.log(emp.name));
+
+    const totalSalary = employees.reduce((sum, emp) => sum + emp.salary, 0);
+
+    console.log("Total Salary Expense:", totalSalary);
+
+    // Task 14: Railway Reservation System
+    console.log("\n----- 14: Railway Reservation System -----");
+
+    let totalSeats = 50;
+
+    function bookSeat(seatsRequested) {
+        if (seatsRequested <= totalSeats) {
+            totalSeats -= seatsRequested;
+            console.log(`Booked ${seatsRequested} seat(s). Remaining: ${totalSeats}`);
+        } else {
+            console.log("Not enough seats available.");
+        }
+    }
+
+    bookSeat(5);
+    bookSeat(10);
+
+    // Task 15: Mobile Store Billing System
+    console.log("\n----- 15: Mobile Store Billing System -----");
+
+    const productCatalog = {
+        Mobile: 25000,
+        Laptop: 50000,
+        Headphone: 2000,
+        Smartwatch: 5000
+    };
+
+    const selectedProducts = ["Mobile", "Headphone", "Smartwatch"];
+
+    let billAmount = 0;
+
+    selectedProducts.forEach(product => {
+        billAmount += productCatalog[product];
+    });
+
+    const gst = billAmount * 0.18;
+
+    console.log("Total Amount:", billAmount);
+    console.log("GST:", gst);
+    console.log("Final Bill:", billAmount + gst);
+
+    </script>
+
+</body>
+</html>
