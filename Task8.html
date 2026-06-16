@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 15 Tasks</title>
+</head>
+<body>
+
+<h2>Open Console (F12)</h2>
+
+<script>
+
+// Task 1 - Employee Salary Management
+console.log("Task 1");
+let employees = [
+    {id:1,name:"Rahul",salary:25000},
+    {id:2,name:"Kavin",salary:50000},
+    {id:3,name:"John",salary:75000}
+];
+
+console.log(employees.filter(emp => emp.salary > 40000));
+console.log(employees.find(emp => emp.salary > 60000));
+console.log(employees.reduce((sum, emp) => sum + emp.salary, 0));
+console.log(employees.map(emp => emp.name));
+
+
+// Task 2 - College Admission
+console.log("Task 2");
+function admission(name, age, percentage){
+    if(age >= 18 && percentage >= 60){
+        console.log(name + " Eligible");
+    }else{
+        console.log(name + " Not Eligible");
+    }
+}
+admission("Rahul",19,75);
+
+
+// Task 3 - E-Commerce Cart
+console.log("Task 3");
+let cart = [
+    {product:"Shoes",price:2000,qty:2},
+    {product:"Watch",price:1500,qty:1},
+    {product:"Bag",price:1000,qty:3}
+];
+
+let total = cart.reduce((sum,item)=>sum + item.price * item.qty,0);
+console.log("Total Bill:", total);
+
+
+// Task 4 - Traffic Fine
+console.log("Task 4");
+let signal = "red";
+
+switch(signal){
+    case "red":
+        console.log("Fine ₹500");
+        break;
+    case "yellow":
+        console.log("Fine ₹100");
+        break;
+    case "green":
+        console.log("No Fine");
+        break;
+}
+
+
+// Task 5 - Student Result
+console.log("Task 5");
+let students = [
+    {name:"A",mark:95},
+    {name:"B",mark:45},
+    {name:"C",mark:80},
+    {name:"D",mark:30}
+];
+
+console.log(students.filter(s => s.mark >= 35));
+console.log(students.filter(s => s.mark < 35));
+
+
+// Task 6 - Food Order
+console.log("Task 6");
+function placeOrder(customer,...items){
+    console.log(customer);
+    console.log(items);
+}
+placeOrder("Rahul","Pizza","Burger");
+
+
+// Task 7 - Bank System
+console.log("Task 7");
+let balance = 5000;
+
+function deposit(amount){
+    balance += amount;
+    console.log(balance);
+}
+
+function withdraw(amount){
+    balance -= amount;
+    console.log(balance);
+}
+
+deposit(1000);
+withdraw(500);
+
+
+// Task 8 - Movie Booking
+console.log("Task 8");
+let seats = [];
+seats.push("A1");
+seats.push("A2");
+console.log(seats);
+
+
+// Task 9 - Login Validation
+console.log("Task 9");
+let username = "rahul";
+let password = "password123";
+let email = "rahul@gmail.com";
+
+console.log(!username.includes(" "));
+console.log(password.length >= 8);
+console.log(email.includes("@"));
+
+
+// Task 10 - Product API
+console.log("Task 10");
+fetch("https://fakestoreapi.com/products")
+.then(res => res.json())
+.then(data => {
+    console.log("Total Products:", data.length);
+});
+
+
+// Task 11 - Birthday Finder
+console.log("Task 11");
+let dob = new Date("2003-05-15");
+
+console.log(dob.getDate());
+console.log(dob.getMonth()+1);
+console.log(dob.getFullYear());
+
+
+// Task 12 - Netflix Plan
+console.log("Task 12");
+let plan = "Premium";
+
+let result = plan === "Premium"
+? "Ultra HD"
+: "Basic";
+
+console.log(result);
+
+
+// Task 13 - Hospital Management
+console.log("Task 13");
+let patients = [
+    {id:1,name:"Ram",critical:true},
+    {id:2,name:"John",critical:false}
+];
+
+console.log(patients.filter(p => p.critical));
+console.log(patients.find(p => p.id === 2));
+
+
+// Task 14 - Inventory Management
+console.log("Task 14");
+let inventory1 = ["Laptop"];
+let inventory2 = ["Mouse"];
+
+let inventory = [...inventory1,...inventory2];
+console.log(inventory);
+
+
+// Task 15 - WhatsApp Group
+console.log("Task 15");
+let group = ["Rahul","John"];
+
+group.push("Kavin");
+group.splice(1,0,"David");
+
+console.log(group);
+
+</script>
+
+</body>
+</html>
