@@ -1,0 +1,412 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+header h1{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+#loading{
+    font-size:18px;
+    font-weight:500;
+}
+
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls{
+    width:95%;
+    margin:30px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.controls input,
+.controls select{
+
+    width:260px;
+    padding:12px;
+
+    border:2px solid #0d6efd;
+    border-radius:8px;
+
+    outline:none;
+    font-size:16px;
+
+}
+
+.controls input:focus,
+.controls select:focus{
+
+    box-shadow:0 0 8px rgba(13,110,253,.4);
+
+}
+
+.cart-box{
+
+    background:#0d6efd;
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+#stats{
+
+    width:95%;
+    margin:30px auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+    border-top:5px solid #0d6efd;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-card h4{
+
+    color:#0d6efd;
+
+    margin-bottom:12px;
+
+}
+
+.stat-card p{
+
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+.stat-card small{
+
+    color:gray;
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.title{
+
+    text-align:center;
+
+    margin:40px 0 20px;
+
+    color:#0d6efd;
+
+    font-size:32px;
+
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+
+.products-container{
+
+    width:95%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+    gap:25px;
+
+}
+
+/* ===========================
+   PRODUCT CARD
+=========================== */
+
+.product{
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.product:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.product img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:contain;
+
+    padding:15px;
+
+}
+
+.product-info{
+
+    padding:20px;
+
+}
+
+.product h3{
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+    height:60px;
+
+    overflow:hidden;
+
+}
+
+.price{
+
+    color:#0d6efd;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin:10px 0;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    margin:10px 0;
+
+    font-size:14px;
+
+}
+
+.rating{
+
+    margin:10px 0;
+
+    color:#ff9800;
+
+    font-weight:bold;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#084298;
+
+}
+
+/* ===========================
+   CART
+=========================== */
+
+#cart{
+
+    width:95%;
+    margin:50px auto;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 10px rgba(0,0,0,.15);
+
+}
+
+.cart-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.cart-item button{
+
+    width:auto;
+
+    background:red;
+
+    padding:8px 15px;
+
+}
+
+.cart-item button:hover{
+
+    background:#b30000;
+
+}
+
+.empty-cart{
+
+    text-align:center;
+
+    color:gray;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+#stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.controls{
+
+flex-direction:column;
+
+}
+
+.controls input,
+.controls select{
+
+width:100%;
+
+}
+
+#stats{
+
+grid-template-columns:1fr;
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+.title{
+
+font-size:26px;
+
+}
+
+}

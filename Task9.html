@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    
+    <title>E-Commerce Product Dashboard</title>
+
+    <link rel="stylesheet" href="Task9.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1><i class="fa-solid fa-cart-shopping"></i> E-Commerce Product Dashboard</h1>
+        <p id="loading">Loading Products...</p>
+    </header>
+
+    <!-- Controls -->
+    <section class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="🔍 Search Product..."
+        >
+
+        <select id="category">
+            <option value="all">All Categories</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="jewelery">Jewelry</option>
+        </select>
+
+        <div class="cart-box">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart :
+            <span id="cartCount">0</span>
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats">
+
+        <!-- Filled by JavaScript -->
+
+    </section>
+
+    <!-- Products -->
+    <section>
+
+        <h2 class="title">Products</h2>
+
+        <div id="products" class="products-container">
+
+            <!-- Product Cards -->
+
+        </div>
+
+    </section>
+
+    <!-- Cart -->
+    <section id="cart">
+
+        <h2 class="title">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart Items
+        </h2>
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Cart is Empty
+            </p>
+
+        </div>
+
+    </section>
+
+    <script src="Task9.js"></script>
+
+</body>
+</html>
