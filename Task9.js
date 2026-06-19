@@ -27,13 +27,13 @@ fetch("https://fakestoreapi.com/products")
     displayProducts(products);
     displayStats(products);
 
-    loading.innerHTML = "✅ Products Loaded Successfully";
+    loading.innerHTML = "";
 
 })
 
 .catch(error => {
 
-    loading.innerHTML = "❌ Failed to Load Products";
+    loading.innerHTML = "";
     console.log(error);
 
 })
